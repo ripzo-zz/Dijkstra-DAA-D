@@ -1,4 +1,4 @@
-# 8Puzzle-DAA-D
+# Dijkstra’s Shortest Path-DAA-D
 DAA-D quiz 2
 
 05111740000155 - Naulia Adam Kuncoro
