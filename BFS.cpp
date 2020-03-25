@@ -11,19 +11,7 @@ struct Node{
     int level; 
 }; 
 
-int printMatrix(int mat[N][N]){
-    for (int i = 0; i < N; i++){ 
-        for (int j = 0; j < N; j++){
-			if(j<2)
-            printf("%d ", mat[i][j]); 
-            if(j==2)
-            printf("%d\n", mat[i][j]);
-		}
-    } 
-}
-
-int main() 
-{ 
+int main(){ 
 	int i,j, x0,y0;
 	int puzzle[N][N], goal[N][N];
 	printf("Input initial state : \n");
@@ -31,5 +19,20 @@ int main()
 	for(i=0;i<N;i++)
 		for(j=0;j<N;j++){
 			scanf("%d",&puzzle[i][j]);
+		}	
+	printf("Input goal state : \n");
+	for(i=0;i<N;i++)
+		for(j=0;j<N;j++){
+			scanf("%d",&goal[i][j]);
+		}	
+		
+	for(i=0;i<N;i++)
+		for(j=0;j<N;j++){
+			if(puzzle[i][j]==0){
+				x0 = i; y0=j; 
+				break;
+			}
 		}
-}
+	printf("wait for solution...\n");
+    return 0; 
+} 
