@@ -10,11 +10,11 @@ struct Node {
 
 int printMatrix(int mat[N][N]) { 
     for (int i = 0; i < N; i++) { 
-        for (int j = 0; j < N; j++) {
-			if(j<2) printf("%d ", mat[i][j]); 
+    	for (int j = 0; j < N; j++) {
+		if(j<2) printf("%d ", mat[i][j]); 
         	if(j==2) printf("%d\n", mat[i][j]);
 		}
-    } 
+    	} 
 }
 
 Node* newNode(int mat[N][N], int x, int y, int newx, int newy, int level, Node* parent) { 
@@ -37,11 +37,11 @@ int calculateCost(int initial[N][N], int final[N][N]) {
     int count = 0; 
     for (int i = 0; i < N; i++){
       for (int j = 0; j < N; j++){
-	  	if (initial[i][j] && initial[i][j] != final[i][j]) 
-           count++;
+	  if (initial[i][j] && initial[i][j] != final[i][j]) 
+          count++;
 	  } 
 	}
-    return count; 
+   return count;
 } 
   
 int isSafe(int x, int y) { 
@@ -59,7 +59,7 @@ void printPath(Node* root) {
 
 void solve(int initial[N][N], int x, int y, 
            int final[N][N]) { 
-   queue<Node*> pq; 
+    queue<Node*> pq; 
   
     Node* root = newNode(initial, x, y, x, y, 0, NULL); 
     root->cost = calculateCost(initial, final); 
